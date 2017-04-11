@@ -1,0 +1,53 @@
+//set the responsive breakpoint
+@mixin medium {
+  @media screen and (min-width: $medium) and (max-width: $large) {
+    @content;
+  }
+}
+
+//set the responsive breakpoint
+@mixin large {
+  @media screen and (min-width: $large) {
+    @content;
+  }
+}
+
+//implement clearfix so we can use it inside any element
+@mixin clearfix {
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+@mixin smallTransition {
+  transition: all 750ms ease;
+}
+
+@mixin alert {
+  background-color: #761C19;
+  border-radius: .3rem;
+  color: #ffffff;
+  padding: 0 1rem;
+}
+
+@mixin hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+@mixin not-hidden {
+  // negate hidden
+  position: static;
+  clip: auto;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

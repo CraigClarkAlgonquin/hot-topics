@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Bitter:400,700|Raleway:300,400,700");
+
+$baseFontsize: $rem * 0.9;
+$bodyFont: "Raleway", sans-serif;
+$headingFont: "Bitter", serif;
+
+//from _variables.scss, sets mobilfirst font
+$mediumFontsize: $baseFontsize * 1.1;
+
+// use on medium screens
+$largeFontsize: $baseFontsize * 1.2;
+
+// use on large screens
+
+$headingDecrease: 0.85;
+$h1: $baseFontsize * 1.75;
+$h2: $h1 * $headingDecrease;
+$h3: $h2 * $headingDecrease;
+$h4: $h3 * $headingDecrease;
+$h5: $h4 * $headingDecrease;
+$h6: $h5 * $headingDecrease;
+
+html {
+  font-family: $bodyFont;
+  font-size: $baseFontsize;
+}
+
+p, .p {
+  margin-top: 1rem;
+  line-height: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+  line-height: 1.6rem;
+}
+
+h1 {
+  font-size: $h1;
+}
+
+h2 {
+  font-size: $h2;
+}
+
+h3 {
+  font-size: $h3;
+}
+
+h4 {
+  font-size: $h4;
+}
+
+h5 {
+  font-size: $h5;
+}
+
+h6 {
+  font-size: $h6;
+}
+
+strong, .strong {
+  font-weight: 700;
+}
+
+em, .em, abbr {
+  font-style: italic;
+}

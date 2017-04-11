@@ -1,0 +1,180 @@
+/* -- Media Queries ---*/
+
+@include medium {
+  p {
+    font-size: $mediumFontsize;
+  }
+
+  /*-- NAVIGATION - -*/
+  nav {
+    ul {
+      flex-direction: row;
+
+      li {
+        width: calc(50% - 1px);
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .branding {}
+
+  footer {}
+
+  .content-container {
+    figure {
+      display: block;
+      width: 33.33%;
+      max-width: 400px;
+      float: left;
+      margin-right: 1rem;
+    }
+
+    p {
+      margin-top: -0.5rem;
+    }
+  }
+}
+
+
+@include large {
+  p {
+    font-size: $largeFontsize;
+  }
+
+  h1 {
+    font-size: $h1 * 1.618;
+  }
+
+  h2 {
+    //margin-left: 1rem;
+ 
+  }
+
+  header {
+    display: flex;
+
+    .branding {
+      display: flex;
+      width: 40%;
+      margin: 0 0 0 0;
+      text-align: left;
+      position: relative;
+
+      .logo {
+        width: 30%;
+        margin: 1rem 1rem 0 0;
+
+        //padding: 1rem;
+        bottom: 0;
+      }
+
+      h1 {
+        margin: 0 .1rem 0 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        line-height: 1em;
+      }
+    }
+  }
+
+  nav {
+    width: 60%;
+    position: relative;
+
+    ul {
+      position: absolute;
+      bottom: 0;
+      width: 50%;
+      flex-direction: row;
+
+      li {
+        width: calc(50% - 5px);
+        margin-bottom: 0px;
+        overflow: auto;
+
+        a {
+          font-size: $baseFontsize * 1.618;
+          height: 2rem;
+          line-height: 2rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .content-box {
+    text-align: left;
+  }
+
+  .branding {
+    h1 {
+      margin: .75em 0;
+      text-align: left;
+    }
+  }
+
+  footer {
+    max-width: 40%;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .social-links {
+      text-align: left;
+    }
+
+    address {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .p {
+      margin-top: 0;
+    }
+
+    .copyright-notice {
+      text-align: right;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  /*** Specific to this site **/
+  article {
+    overflow: auto;
+
+    figure {
+      display: block;
+      width: 33.33%;
+      max-width: 400px;
+      float: left;
+      margin-right: 1rem;
+    }
+  }
+
+  .article-primary {}
+
+  .article-secondary {
+    margin-top: 1rem;
+    display: flex;
+
+    article {
+      width: calc(50% - 1rem);
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .content-container {
+    p {
+      margin: -.5rem 0 0 0;
+    }
+  }
+}

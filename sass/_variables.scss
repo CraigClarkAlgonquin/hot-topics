@@ -1,0 +1,27 @@
+//sizes of things
+//set value of 1 rem
+$rem: 15pt;
+
+//for mobile, things need to be this height to be clickable
+$thumb: 50px;
+
+$borderRadius: 5px;
+
+//widths for media queries
+$medium: 35rem;
+$large: 80rem;
+$maxSiteWidth: 100rem;
+$minSiteWidth: 22rem;
+
+//colors
+$ColorBackground: #3b4f2b;
+$ColorHeadings: mix(black, $ColorBackground, 20%);
+$ColorText: mix(black, $ColorBackground, 50%);
+$ColorLighter: mix(white, $ColorBackground, 90%);
+$ColorDarker: mix(black, $ColorBackground, 20%);
+
+$ColorMenuBackground: $ColorDarker;
+
+$ColorTransparentOverlayDark: rgba($ColorDarker, 0.75);
+
+$ColorBorder: mix(white, $ColorBackground, 70%);

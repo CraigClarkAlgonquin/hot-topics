@@ -1,0 +1,300 @@
+/* 
+Colours from _Variables.scss
+$ColorBackground: #3b4f2b;
+This is a monochromatic ( analgous ) colour scheme. 
+Changing $colorBackground will change the tones and values of everything.
+
+
+*/
+
+@import "variables";
+@import "mixins";
+@import "typography";
+@import "form";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+* {
+  outline: none;
+}
+
+@include clearfix;
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $ColorBackground;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $ColorHeadings;
+}
+
+p {
+  color: $ColorText;
+}
+
+a {
+  text-decoration: none;
+  color: mix(black, $ColorText, 10%);
+  font-weight: 700;
+  transition: all 750ms ease;
+
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+
+article {
+  clear: both;
+}
+
+/*-- NAVIGATION - -*/
+nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @include clearfix;
+
+    li {
+      width: 100%;
+      margin-bottom: 1px;
+
+      a {
+        display: block;
+        background-color: $ColorMenuBackground;
+        color: mix(white, $ColorMenuBackground, 70%);
+        height: $thumb;
+        line-height: $thumb;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+          color: mix(black, $ColorMenuBackground, 70%);
+          background-color: mix(white, $ColorMenuBackground, 80%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  font-family: $bodyFont;
+  font-size: 1.32rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: 3px solid $ColorDarker;
+  background-color: $ColorDarker;
+  color: $ColorLighter;
+  transition: all 750ms ease;
+  outline: 0;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $ColorLighter;
+    color: $ColorDarker;
+  }
+}
+
+/*-- .content-box styles entire content --*/
+.content-box {
+  display: block;
+  text-align: center;
+  background-color: $ColorLighter;
+}
+
+.wrapper {
+  max-width: $maxSiteWidth;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.branding {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+
+  h1 {
+    color: $ColorLighter;
+
+    abbr {
+      font-style: normal;
+    }
+  }
+}
+
+.full-width {
+  // use for things that go 100% the width of the site
+  background-color: $ColorDarker;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.tag-line {
+  background-image: url(../images/quote-bkg.png);
+  margin: 1rem 0;
+
+  blockquote {
+    p {
+      color: $ColorLighter;
+    }
+
+    padding: 1rem;
+  }
+}
+
+.logo {
+  margin: 2rem;
+
+  img {
+    max-height: 187px;
+    overflow: auto;
+  }
+}
+
+/*-- Styling footer --*/
+footer {
+  margin-top: 1rem;
+  padding: 1rem 0;
+
+  //overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $ColorLighter;
+
+  a {
+    color: $ColorLighter;
+  }
+
+  p {
+    color: $ColorLighter;
+  }
+
+  .social-links {
+    flex-grow: 1;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        font-size: 1.5rem;
+
+        a {
+          color: mix(white, $ColorLighter, 70%);
+          margin: .5rem;
+
+          &:hover {
+            color: mix(black, $ColorLighter, 30%);
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright-notice {
+    flex-grow: 1;
+    padding: .5rem;
+    text-align: center;
+  }
+
+  address {
+    flex-grow: 1;
+    padding: .5rem;
+
+    a {
+      font-weight: 300;
+
+      &:hover, &:active {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/*unique */
+
+/* deal with the slide show */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/*** specific to this site **/
+address {
+  text-align: center;
+  padding: 1rem;
+}
+
+.content-container {
+  overflow: auto;
+  margin-bottom: 1rem;
+
+  h2 {
+    padding: 1rem 0;
+  }
+
+  p {
+    margin: 1rem;
+    text-align: left;
+  }
+
+  figure {
+    background-color: $ColorBackground;
+    color: $ColorLighter;
+
+    figcaption {
+      padding: .75rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.feedback {
+  li {
+    margin-bottom: .6rem;
+  }
+}
+
+//END specific to this site
+
+@import "queries";
